@@ -1,5 +1,4 @@
 const cesar = sentence => {
-
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
     const alphabetArray = alphabet.split('');
     const alphabetBigArray = alphabet.toUpperCase().split('');
@@ -17,7 +16,6 @@ const cesar = sentence => {
     });
 
     return result.join('');
-
 }
 
 export { cesar };

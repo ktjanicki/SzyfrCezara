@@ -1,23 +1,8 @@
-
-
+// Main JavaScript file
 
 import { cesar } from './cesar.js';
 
-
-
-
-
-
-
-
-const button = document.querySelector('button.encryptButton');
-const input = document.querySelector('input')
-const message = document.querySelector('aside div');
-
-function goEncrypt() {
-    message.textContent = cesar(input.value);
-}
-
-console.log(input)
-
-button.addEventListener("click", goEncrypt);
+document.querySelector('.encryptButton').addEventListener('click', () => {
+    document.querySelector('.message').textContent = cesar(document.querySelector('input').value);
+    document.querySelector('.result').classList.add('show');
+});
