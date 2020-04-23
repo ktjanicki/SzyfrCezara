@@ -3,11 +3,15 @@
 import { caesar13 } from './caesar.js';
 
 document.querySelector('.encryptButton').addEventListener('click', () => {
+    const resultMessage = document.querySelector('.message');
+    document.querySelector('.result').classList.add('show');
+    let output = '';
+
     try {
-        document.querySelector('.message').textContent = caesar13(document.querySelector('input').value);
-        document.querySelector('.result').classList.add('show');
+        output = caesar13(document.querySelector('input').value);
     } catch (e) {
-        document.querySelector('.message').textContent = e.message;
-        document.querySelector('.result').classList.add('show');
+        output = e.message;
     }
+
+    resultMessage.textContent = output;
 });
