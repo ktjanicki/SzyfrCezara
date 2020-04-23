@@ -1,5 +1,5 @@
 
-const cesar13 = sentence => {
+const caesar13 = sentence => {
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
     const alphabetArray = alphabet.split('');
     const alphabetBigArray = alphabet.toUpperCase().split('');
@@ -25,4 +25,4 @@ const cesar13 = sentence => {
     return result.join('');
 }
 
-export { cesar13 };
+export { caesar13 };
