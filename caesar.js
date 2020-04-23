@@ -8,16 +8,22 @@ const caesar13 = sentence => {
 
     if (!new RegExp(/^[a-zA-Z0-9/?]*$/g).test(sentence)) {
         throw new Error('Program obsługuje tylko litery bez polskich znaków i cyfry');
-    } else if (sentence === '') {
+    }
+
+    if (sentence === '') {
         throw new Error('Nic nie zostało wpisane');
     }
 
     sentence.split('').forEach(letter => {
         if (alphabetArray.includes(letter)) {
             result.push(alphabetArray[encrypt(alphabetArray.indexOf(letter))]);
-        } else if (alphabetBigArray.includes(letter)) {
+        }
+
+        if (alphabetBigArray.includes(letter)) {
             result.push(alphabetBigArray[encrypt(alphabetBigArray.indexOf(letter))]);
-        } else {
+        }
+
+        if (!alphabetArray.includes(letter) && !alphabetBigArray.includes(letter)) {
             result.push(letter);
         }
     });
