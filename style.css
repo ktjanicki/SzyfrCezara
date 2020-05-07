@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -66,7 +65,7 @@ button {
     text-align: center;
     display: none;
 }
-    
-.show p{
+
+.show p {
     display: block;
 }
